@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/benderamp/hdl/basic_boolean/basic_boolean_test.v" Line 6: Port <arg fmt="%s" index="1">a_nand_b</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/benderamp/Documents/verilog-basics.git/basic_boolean/basic_boolean_test.v" Line 6: Port <arg fmt="%s" index="1">a_nand_b</arg> is not connected to this instance
 </msg>
 
 </messages>

@@ -1,0 +1,65 @@
+# Pin assignment for LEDs
+#NET "ld<7>" LOC = "g1" ; 
+#NET "ld<6>" LOC = "p4" ; 
+#NET "ld<5>" LOC = "n4" ; 
+#NET "ld<4>" LOC = "n5" ; 
+#NET "ld<3>" LOC = "p6" ; 
+#NET "ld<2>" LOC = "p7" ; 
+#NET "ld<1>" LOC = "m11" ; 
+#NET "ld<0>" LOC = "m5" ; 
+
+# Pin assignment for slide switches
+#NET "sw<7>" LOC = "n3"; 
+#NET "sw<6>" LOC = "e2"; 
+#NET "sw<5>" LOC = "f3"; 
+#NET "sw<4>" LOC = "g3"; 
+#NET "sw<3>" LOC = "b4"; 
+#NET "sw<2>" LOC = "k3"; 
+#NET "sw<1>" LOC = "l3"; 
+NET "sw<0>" LOC = "p11"; 
+
+# Pin assignment for pushbutton switches
+#NET "btn<3>" LOC = "a7"; 
+#NET "btn<2>" LOC = "m4"; 
+#NET "btn<1>" LOC = "c11"; 
+#NET "btn<0>" LOC = "g12"; 
+
+# Pin assignment for 7-segment displays
+#NET "a_to_g<6>"  LOC = "l14"  ;
+#NET "a_to_g<5>"  LOC = "h12"  ;
+#NET "a_to_g<4>"  LOC = "n14"  ;
+#NET "a_to_g<3>"  LOC = "n11"  ;
+#NET "a_to_g<2>"  LOC = "p12"  ;
+#NET "a_to_g<1>"  LOC = "l13"  ;
+#NET "a_to_g<0>"  LOC = "m12"  ;
+#NET "dp"  LOC = "n13"  ;
+
+#NET "an<3>" LOC = "k14"; 
+#NET "an<2>" LOC = "m13"; 
+#NET "an<1>" LOC = "j12"; 
+#NET "an<0>" LOC = "f12"; 
+
+# Pin assignment for clock
+#NET "clk" LOC = "b8"; 
+
+# Loop Back only tested signals
+NET "PIO<72>" LOC = "B2"; # Bank = 1, Signal name = JA1
+NET "PIO<73>" LOC = "A3"; # Bank = 1, Signal name = JA2
+NET "PIO<74>" LOC = "J3"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JA3
+NET "PIO<75>" LOC = "B5"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JA4
+
+NET "PIO<76>" LOC = "C6"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JB1
+NET "PIO<77>" LOC = "B6"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JB2
+NET "PIO<78>" LOC = "C5"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JB3
+NET "PIO<79>" LOC = "B7"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JB4
+
+#NET "PIO<80>" LOC = "A9"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC1
+#NET "PIO<81>" LOC = "B9"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC2
+#NET "PIO<82>" LOC = "A10"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC3
+#NET "PIO<83>" LOC = "C9"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JC4
+
+#NET "PIO<84>" LOC = "C12"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JD1
+#NET "PIO<85>" LOC = "A13"; #| DRIVE = 2  | PULLUP ; # Bank = 2, Signal name = JD2
+#NET "PIO<86>" LOC = "C13"; #| DRIVE = 2  | PULLUP ; # Bank = 1, Signal name = JD3
+#NET "PIO<87>" LOC = "D12"; #| DRIVE = 2  | PULLUP ; # Bank = 2, Signal name = JD4 
+
