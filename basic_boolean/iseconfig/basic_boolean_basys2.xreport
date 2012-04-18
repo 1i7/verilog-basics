@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-04-17T23:50:52</DateModified>
+  <DateModified>2012-04-19T00:56:48</DateModified>
   <ModuleName>basic_boolean_basys2</ModuleName>
   <SummaryTimeStamp>2012-04-17T23:43:22</SummaryTimeStamp>
-  <SavedFilePath>/home/benderamp/hdl/basic_boolean/iseconfig/basic_boolean_basys2.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/benderamp/hdl/basic_boolean</ImplementationReportsDirectory>
+  <SavedFilePath>/home/benderamp/Documents/verilog-basics.git/basic_boolean/iseconfig/basic_boolean_basys2.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/benderamp/Documents/verilog-basics.git/basic_boolean/</ImplementationReportsDirectory>
   <DateInitialized>2012-04-17T22:11:10</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
