@@ -15,15 +15,24 @@
   <version xil_pn:ise_version="14.2" xil_pn:schema_version="2"/>
 
   <files>
-    <file xil_pn:name="seven_driver.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="flip_flops.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="1"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
-    <file xil_pn:name="seven_driver_basys2.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="flip_flops_top.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="2"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
     </file>
-    <file xil_pn:name="basys2.ucf" xil_pn:type="FILE_UCF">
+    <file xil_pn:name="basys2_d_flip_flop.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
+    </file>
+    <file xil_pn:name="basys2_d_latch.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
+    </file>
+    <file xil_pn:name="basys2_rs_latch.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
+    </file>
+    <file xil_pn:name="basys2_d_4bit_regirster.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
   </files>
@@ -35,9 +44,10 @@
     <property xil_pn:name="Allow Unexpanded Blocks" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Allow Unmatched LOC Constraints" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Allow Unmatched Timing Group Constraints" xil_pn:value="false" xil_pn:valueState="default"/>
+    <property xil_pn:name="Analysis Effort Level" xil_pn:value="Standard" xil_pn:valueState="default"/>
     <property xil_pn:name="Asynchronous To Synchronous" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Auto Implementation Compile Order" xil_pn:value="true" xil_pn:valueState="default"/>
-    <property xil_pn:name="Auto Implementation Top" xil_pn:value="true" xil_pn:valueState="default"/>
+    <property xil_pn:name="Auto Implementation Top" xil_pn:value="false" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Automatic BRAM Packing" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Automatically Insert glbl Module in the Netlist" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Automatically Run Generate Target PROM/ACE File" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -56,7 +66,11 @@
     <property xil_pn:name="Compile UNISIM (Functional) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile XilinxCoreLib (CORE Generator) Simulation Library" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Compile for HDL Debugging" xil_pn:value="true" xil_pn:valueState="default"/>
+    <property xil_pn:name="Configuration Clk (Configuration Pins)" xil_pn:value="Pull Up" xil_pn:valueState="default"/>
     <property xil_pn:name="Configuration Pin Done" xil_pn:value="Pull Up" xil_pn:valueState="default"/>
+    <property xil_pn:name="Configuration Pin M0" xil_pn:value="Pull Up" xil_pn:valueState="default"/>
+    <property xil_pn:name="Configuration Pin M1" xil_pn:value="Pull Up" xil_pn:valueState="default"/>
+    <property xil_pn:name="Configuration Pin M2" xil_pn:value="Pull Up" xil_pn:valueState="default"/>
     <property xil_pn:name="Configuration Pin Program" xil_pn:value="Pull Up" xil_pn:valueState="default"/>
     <property xil_pn:name="Configuration Rate" xil_pn:value="Default (1)" xil_pn:valueState="default"/>
     <property xil_pn:name="Correlate Output to Input Design" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -69,19 +83,24 @@
     <property xil_pn:name="Create Mask File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Create ReadBack Data Files" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Cross Clock Analysis" xil_pn:value="false" xil_pn:valueState="default"/>
+    <property xil_pn:name="DCI Update Mode" xil_pn:value="As Required" xil_pn:valueState="default"/>
+    <property xil_pn:name="DSP Utilization Ratio" xil_pn:value="100" xil_pn:valueState="default"/>
     <property xil_pn:name="Decoder Extraction" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Delay Values To Be Read from SDF" xil_pn:value="Setup Time" xil_pn:valueState="default"/>
     <property xil_pn:name="Device" xil_pn:value="xc3s100e" xil_pn:valueState="default"/>
     <property xil_pn:name="Device Family" xil_pn:value="Spartan3E" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Device Speed Grade/Select ABS Minimum" xil_pn:value="-5" xil_pn:valueState="default"/>
+    <property xil_pn:name="Disable Detailed Package Model Insertion" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Do Not Escape Signal and Instance Names in Netlist" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Done (Output Events)" xil_pn:value="Default (4)" xil_pn:valueState="default"/>
     <property xil_pn:name="Drive Done Pin High" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable BitStream Compression" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Cyclic Redundancy Checking (CRC)" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Debugging of Serial Mode BitStream" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Enable Internal Done Pipe" xil_pn:value="false" xil_pn:valueState="default"/>
+    <property xil_pn:name="Enable Hardware Co-Simulation" xil_pn:value="false" xil_pn:valueState="default"/>
+    <property xil_pn:name="Enable Internal Done Pipe" xil_pn:value="true" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Enable Message Filtering" xil_pn:value="false" xil_pn:valueState="default"/>
+    <property xil_pn:name="Enable Multi-Threading" xil_pn:value="Off" xil_pn:valueState="default"/>
     <property xil_pn:name="Enable Outputs (Output Events)" xil_pn:value="Default (5)" xil_pn:valueState="default"/>
     <property xil_pn:name="Equivalent Register Removal XST" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Evaluation Development Board" xil_pn:value="None Specified" xil_pn:valueState="default"/>
@@ -121,9 +140,9 @@
     <property xil_pn:name="ISim UUT Instance Name" xil_pn:value="UUT" xil_pn:valueState="default"/>
     <property xil_pn:name="Ignore User Timing Constraints Map" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Ignore User Timing Constraints Par" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Implementation Top" xil_pn:value="Module|seven_driver_basys2" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top File" xil_pn:value="seven_driver_basys2.v" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/seven_driver_basys2" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top" xil_pn:value="Module|rs_latch_top" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top File" xil_pn:value="flip_flops_top.v" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/rs_latch_top" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Include 'uselib Directive in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Include SIMPRIM Models in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Include UNISIM Models in Verilog File" xil_pn:value="false" xil_pn:valueState="default"/>
@@ -147,7 +166,7 @@
     <property xil_pn:name="Manual Implementation Compile Order" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Map Effort Level" xil_pn:value="High" xil_pn:valueState="default"/>
     <property xil_pn:name="Map Slice Logic into Unused Block RAMs" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Max Fanout" xil_pn:value="500" xil_pn:valueState="default"/>
+    <property xil_pn:name="Max Fanout" xil_pn:value="100000" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Maximum Number of Lines in Report" xil_pn:value="1000" xil_pn:valueState="default"/>
     <property xil_pn:name="Maximum Signal Name Length" xil_pn:value="20" xil_pn:valueState="default"/>
     <property xil_pn:name="Move First Flip-Flop Stage" xil_pn:value="true" xil_pn:valueState="default"/>
@@ -181,7 +200,7 @@
     <property xil_pn:name="Other XPWR Command Line Options" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="Other XST Command Line Options" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="Output Extended Identifiers" xil_pn:value="false" xil_pn:valueState="default"/>
-    <property xil_pn:name="Output File Name" xil_pn:value="seven_driver_basys2" xil_pn:valueState="default"/>
+    <property xil_pn:name="Output File Name" xil_pn:value="rs_latch_top" xil_pn:valueState="default"/>
     <property xil_pn:name="Overwrite Compiled Libraries" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Pack I/O Registers into IOBs" xil_pn:value="Auto" xil_pn:valueState="default"/>
     <property xil_pn:name="Pack I/O Registers/Latches into IOBs" xil_pn:value="Off" xil_pn:valueState="default"/>
@@ -193,10 +212,10 @@
     <property xil_pn:name="Place And Route Mode" xil_pn:value="Normal Place and Route" xil_pn:valueState="default"/>
     <property xil_pn:name="Placer Effort Level (Overrides Overall Level)" xil_pn:value="None" xil_pn:valueState="default"/>
     <property xil_pn:name="Port to be used" xil_pn:value="Auto - default" xil_pn:valueState="default"/>
-    <property xil_pn:name="Post Map Simulation Model Name" xil_pn:value="seven_driver_basys2_map.v" xil_pn:valueState="default"/>
-    <property xil_pn:name="Post Place &amp; Route Simulation Model Name" xil_pn:value="seven_driver_basys2_timesim.v" xil_pn:valueState="default"/>
-    <property xil_pn:name="Post Synthesis Simulation Model Name" xil_pn:value="seven_driver_basys2_synthesis.v" xil_pn:valueState="default"/>
-    <property xil_pn:name="Post Translate Simulation Model Name" xil_pn:value="seven_driver_basys2_translate.v" xil_pn:valueState="default"/>
+    <property xil_pn:name="Post Map Simulation Model Name" xil_pn:value="rs_latch_top_map.v" xil_pn:valueState="default"/>
+    <property xil_pn:name="Post Place &amp; Route Simulation Model Name" xil_pn:value="rs_latch_top_timesim.v" xil_pn:valueState="default"/>
+    <property xil_pn:name="Post Synthesis Simulation Model Name" xil_pn:value="rs_latch_top_synthesis.v" xil_pn:valueState="default"/>
+    <property xil_pn:name="Post Translate Simulation Model Name" xil_pn:value="rs_latch_top_translate.v" xil_pn:valueState="default"/>
     <property xil_pn:name="Power Reduction Map" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Power Reduction Par" xil_pn:value="false" xil_pn:valueState="default"/>
     <property xil_pn:name="Preferred Language" xil_pn:value="Verilog" xil_pn:valueState="default"/>
@@ -230,6 +249,8 @@
     <property xil_pn:name="Reset On Configuration Pulse Width" xil_pn:value="100" xil_pn:valueState="default"/>
     <property xil_pn:name="Resource Sharing" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Retain Hierarchy" xil_pn:value="true" xil_pn:valueState="default"/>
+    <property xil_pn:name="Revision Select" xil_pn:value="00" xil_pn:valueState="default"/>
+    <property xil_pn:name="Revision Select Tristate" xil_pn:value="Disable" xil_pn:valueState="default"/>
     <property xil_pn:name="Router Effort Level (Overrides Overall Level)" xil_pn:value="None" xil_pn:valueState="default"/>
     <property xil_pn:name="Run Design Rules Checker (DRC)" xil_pn:value="true" xil_pn:valueState="default"/>
     <property xil_pn:name="Run for Specified Time" xil_pn:value="true" xil_pn:valueState="default"/>
@@ -304,7 +325,7 @@
     <!-- The following properties are for internal use only. These should not be modified.-->
     <!--                                                                                  -->
     <property xil_pn:name="PROP_BehavioralSimTop" xil_pn:value="" xil_pn:valueState="default"/>
-    <property xil_pn:name="PROP_DesignName" xil_pn:value="seven_driver" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_DesignName" xil_pn:value="flip_flop" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_DevFamilyPMName" xil_pn:value="spartan3e" xil_pn:valueState="default"/>
     <property xil_pn:name="PROP_FPGAConfiguration" xil_pn:value="FPGAConfiguration" xil_pn:valueState="default"/>
     <property xil_pn:name="PROP_PostMapSimTop" xil_pn:value="" xil_pn:valueState="default"/>
@@ -312,13 +333,18 @@
     <property xil_pn:name="PROP_PostSynthSimTop" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="PROP_PostXlateSimTop" xil_pn:value="" xil_pn:valueState="default"/>
     <property xil_pn:name="PROP_PreSynthesis" xil_pn:value="PreSynthesis" xil_pn:valueState="default"/>
-    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2012-04-19T02:41:35" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="174A603726497B8C3AAE78D447DB8BBD" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intProjectCreationTimestamp" xil_pn:value="2012-08-18T00:14:00" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="PROP_intWbtProjectID" xil_pn:value="7745F8DCD0E8BDCD45D4B7FF702607AE" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirLocWRTProjDir" xil_pn:value="Same" xil_pn:valueState="non-default"/>
     <property xil_pn:name="PROP_intWorkingDirUsed" xil_pn:value="No" xil_pn:valueState="non-default"/>
   </properties>
 
-  <bindings/>
+  <bindings>
+    <binding xil_pn:location="/d_flip_flop_top" xil_pn:name="basys2_d_flip_flop.ucf"/>
+    <binding xil_pn:location="/d_latch_top" xil_pn:name="basys2_d_latch.ucf"/>
+    <binding xil_pn:location="/rs_latch_top" xil_pn:name="basys2_rs_latch.ucf"/>
+    <binding xil_pn:location="/d_4bit_register_top" xil_pn:name="basys2_d_4bit_regirster.ucf"/>
+  </bindings>
 
   <libraries/>
 

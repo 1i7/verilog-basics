@@ -1,0 +1,12 @@
+# 4-bit register with 4 D flip-flops
+NET "sw<0>" LOC = "p11"; 
+
+NET "PIO<72>" LOC = "B2";
+NET "PIO<73>" LOC = "A3";
+NET "PIO<74>" LOC = "J3";
+NET "PIO<75>" LOC = "B5";
+
+NET "ld<3>" LOC = "p6" ; 
+NET "ld<2>" LOC = "p7" ; 
+NET "ld<1>" LOC = "m11" ; 
+NET "ld<0>" LOC = "m5" ; 

@@ -1,0 +1,5 @@
+# RS latch
+NET "PIO<72>" LOC = "B2";
+NET "PIO<73>" LOC = "A3";
+NET "ld<1>" LOC = "m11" ; 
+NET "ld<0>" LOC = "m5" ; 

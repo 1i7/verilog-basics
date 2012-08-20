@@ -1,0 +1,5 @@
+# D latch
+NET "sw<0>" LOC = "p11"; 
+NET "PIO<72>" LOC = "B2"; 
+NET "ld<1>" LOC = "m11" ;
+NET "ld<0>" LOC = "m5" ;

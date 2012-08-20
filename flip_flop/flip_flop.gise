@@ -19,10 +19,16 @@
 
   <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
 
-  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="seven_driver.xise"/>
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="flip_flop.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_NCD" xil_pn:name="seven_driver_basys2_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="d_4bit_register_top_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="d_flip_flop_top_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="d_latch_basys2_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="d_latch_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="d_latch_top_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="flip_flops_top_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="rs_latch_top_guide.ncd" xil_pn:origination="imported"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
