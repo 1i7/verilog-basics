@@ -1,0 +1,5 @@
+# Pin assignment for LEDs
+NET "ld<0>" LOC = "m5" ; 
+
+# Pin assignment for clock
+NET "clk" LOC = "b8"; 

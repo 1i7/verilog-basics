@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/traffic_light_top.ncd
+OUTFILE=/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/traffic_light_top.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light
+LICENSE=WebPack
+USER_INFO=209183414_0_0_216
