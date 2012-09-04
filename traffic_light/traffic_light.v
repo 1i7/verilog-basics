@@ -19,6 +19,12 @@ module traffic_light(
 	 reg timer_one_second_reset;
 	 timer one_second(.clock(clk), .reset(timer_one_second_reset), 
 	     .finish(timer_one_second));
+		  
+	 // parametrized module possible example - replace 
+	 // default 25 value with 26, so timer would work 2 
+	 // seconds instead of 1 (not used here)
+	 // timer #(26) two_seconds(.clock(clk), .reset(timer_two_seconds_reset), 
+	 //    .finish(timer_two_seconds));
 	 	 	 
 	 // detect next state depending on current state
     // and current clock - change state one time per second:
