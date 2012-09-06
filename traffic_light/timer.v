@@ -11,7 +11,7 @@ module timer
 	 
 	 reg [delay_bit:0] counter; 
 
-    always @(posedge clock)
+    always @(posedge clock, posedge reset)
     begin
         if (reset)
             counter <= 0;
