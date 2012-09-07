@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map O.87xd on Thu May 03 16:28:49 2012
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "PIO<79>" LOCATE = SITE "B7" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "PIO<76>" LOCATE = SITE "C6" LEVEL 1;
+COMP "ld<0>" LOCATE = SITE "M5" LEVEL 1;
+COMP "danger" LOCATE = SITE "B2" LEVEL 1;
+COMP "PIO<77>" LOCATE = SITE "B6" LEVEL 1;
+COMP "PIO<78>" LOCATE = SITE "C5" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

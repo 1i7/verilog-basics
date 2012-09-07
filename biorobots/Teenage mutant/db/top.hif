@@ -1,0 +1,175 @@
+Quartus II 32-bit
+Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+15
+1490
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+trafic_lights
+# storage
+db|top.(1).cnf
+db|top.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+t_lights.v
+adefe1cf7a875c9983905836f3118e82
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+rest
+000
+PARAMETER_UNSIGNED_BIN
+DEF
+head_going_o
+001
+PARAMETER_UNSIGNED_BIN
+DEF
+head_going_i
+100
+PARAMETER_UNSIGNED_BIN
+DEF
+head_out
+010
+PARAMETER_UNSIGNED_BIN
+DEF
+body_roll_going
+111
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+trafic_lights:t_lights
+}
+# macro_sequence
+
+# end
+# entity
+timer
+# storage
+db|top.(2).cnf
+db|top.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+clock.v
+3ef669c7e4761865a6b4f5fbf17ba1f
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+delay_bit
+25
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+trafic_lights:t_lights|timer:count
+}
+# macro_sequence
+
+# end
+# entity
+top
+# storage
+db|top.(0).cnf
+db|top.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+top.v
+f841288a3f6c56934562e4eb805e233e
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+action_head_i
+100
+PARAMETER_UNSIGNED_BIN
+DEF
+action_head_o
+001
+PARAMETER_UNSIGNED_BIN
+DEF
+action_rolling
+010
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

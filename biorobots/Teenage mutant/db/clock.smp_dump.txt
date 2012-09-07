@@ -1,0 +1,8 @@
+
+State Machine - |top|trafic_lights:t_lights|state
+Name state.body_roll_going state.head_going_i state.head_out state.head_going_o state.rest 
+state.rest 0 0 0 0 0 
+state.head_going_o 0 0 0 1 1 
+state.head_out 0 0 1 0 1 
+state.head_going_i 0 1 0 0 1 
+state.body_roll_going 1 0 0 0 1 

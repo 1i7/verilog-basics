@@ -1,0 +1,8 @@
+Release 13.4 Drc O.87xd (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu May 10 14:53:54 2012
+
+drc -z scorpion_top.ncd scorpion_top.pcf
+
+DRC detected 0 errors and 0 warnings.

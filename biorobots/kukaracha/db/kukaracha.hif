@@ -1,0 +1,242 @@
+Quartus II 32-bit
+Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+13
+1110
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Clock_divider
+# storage
+db|kukaracha.(1).cnf
+db|kukaracha.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Clock_divider.v
+589edfe47b89ac943ae620bdbbc8186e
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+delay_bit
+25
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+kukaracha:kuk|Clock_divider:count
+}
+# macro_sequence
+
+# end
+# entity
+kukaracha_top
+# storage
+db|kukaracha.(0).cnf
+db|kukaracha.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+kukaracha_top.v
+7394c83c1e09bf5509f7f7f51517fc1
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+state_forward_wait
+000
+PARAMETER_UNSIGNED_BIN
+DEF
+state_forward
+001
+PARAMETER_UNSIGNED_BIN
+DEF
+state_forward_rest
+010
+PARAMETER_UNSIGNED_BIN
+DEF
+state_back_wait
+011
+PARAMETER_UNSIGNED_BIN
+DEF
+state_back
+100
+PARAMETER_UNSIGNED_BIN
+DEF
+state_back_rest
+101
+PARAMETER_UNSIGNED_BIN
+DEF
+action_forward
+00
+PARAMETER_UNSIGNED_BIN
+DEF
+action_wait
+01
+PARAMETER_UNSIGNED_BIN
+DEF
+action_back
+10
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Clock_divider
+# storage
+db|kukaracha.(3).cnf
+db|kukaracha.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+Clock_divider.v
+589edfe47b89ac943ae620bdbbc8186e
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+delay_bit
+28
+PARAMETER_SIGNED_DEC
+USR
+}
+# macro_sequence
+
+# end
+# entity
+kukaracha
+# storage
+db|kukaracha.(2).cnf
+db|kukaracha.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+kukaracha.v
+ad654b7b2d2aa9afac6b73bc28b5ef2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+state_forward_wait
+000
+PARAMETER_UNSIGNED_BIN
+DEF
+state_forward
+001
+PARAMETER_UNSIGNED_BIN
+DEF
+state_forward_rest
+010
+PARAMETER_UNSIGNED_BIN
+DEF
+state_back_wait
+011
+PARAMETER_UNSIGNED_BIN
+DEF
+state_back
+100
+PARAMETER_UNSIGNED_BIN
+DEF
+state_back_rest
+101
+PARAMETER_UNSIGNED_BIN
+DEF
+}
+# hierarchies {
+kukaracha:kuk
+}
+# macro_sequence
+
+# end
+# complete
+

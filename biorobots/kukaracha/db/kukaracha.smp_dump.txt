@@ -1,0 +1,9 @@
+
+State Machine - |kukaracha_top|kukaracha:kuk|state
+Name state.state_back_rest state.state_back state.state_back_wait state.state_forward_rest state.state_forward state.state_forward_wait 
+state.state_forward_wait 0 0 0 0 0 0 
+state.state_forward 0 0 0 0 1 1 
+state.state_forward_rest 0 0 0 1 0 1 
+state.state_back_wait 0 0 1 0 0 1 
+state.state_back 0 1 0 0 0 1 
+state.state_back_rest 1 0 0 0 0 1 

@@ -1,0 +1,3 @@
+verilog work "clock_divider.v"
+verilog work "scorpion.v"
+verilog work "scorpion_top.v"

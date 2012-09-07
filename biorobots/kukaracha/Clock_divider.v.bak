@@ -1,0 +1,10 @@
+module Clock_divider(input clk, output one_second);
+
+reg [25:0] counter;
+
+always @(posedge clk)
+counter <= counter + 1;
+
+assign one_second = counter [25];
+
+endmodule

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/am10/mdemin/scorpion/sym_top_isim_beh.exe" -prj "/home/am10/mdemin/scorpion/sym_top_beh.prj" "work.sym_top" "work.glbl" 

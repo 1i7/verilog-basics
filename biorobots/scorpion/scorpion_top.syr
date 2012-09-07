@@ -1,0 +1,497 @@
+Release 13.4 - xst O.87xd (lin)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: scorpion_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "scorpion_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "scorpion_top"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : scorpion_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "clock_divider.v" in library work
+Compiling verilog file "scorpion.v" in library work
+Module <clock_divider> compiled
+Compiling verilog file "scorpion_top.v" in library work
+Module <scorpion> compiled
+Module <scorpion_top> compiled
+No errors in compilation
+Analysis of file <"scorpion_top.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <scorpion_top> in library <work> with parameters.
+	action_attack = "10"
+	action_dart = "11"
+	action_retreat = "01"
+	action_wait = "00"
+	state_attack = "0111"
+	state_dart = "1000"
+	state_retreat1 = "0001"
+	state_retreat2 = "0100"
+	state_sensor1 = "0000"
+	state_sensor2 = "0011"
+	state_sensor3 = "0110"
+	state_wait1 = "0010"
+	state_wait2 = "0101"
+	state_wait3 = "1001"
+
+Analyzing hierarchy for module <scorpion> in library <work> with parameters.
+	state_attack = "0111"
+	state_dart = "1000"
+	state_retreat1 = "0001"
+	state_retreat2 = "0100"
+	state_sensor1 = "0000"
+	state_sensor2 = "0011"
+	state_sensor3 = "0110"
+	state_wait1 = "0010"
+	state_wait2 = "0101"
+	state_wait3 = "1001"
+
+Analyzing hierarchy for module <clock_divider> in library <work> with parameters.
+	delay_bit = "00000000000000000000000000011001"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <scorpion_top>.
+	action_attack = 2'b10
+	action_dart = 2'b11
+	action_retreat = 2'b01
+	action_wait = 2'b00
+	state_attack = 4'b0111
+	state_dart = 4'b1000
+	state_retreat1 = 4'b0001
+	state_retreat2 = 4'b0100
+	state_sensor1 = 4'b0000
+	state_sensor2 = 4'b0011
+	state_sensor3 = 4'b0110
+	state_wait1 = 4'b0010
+	state_wait2 = 4'b0101
+	state_wait3 = 4'b1001
+Module <scorpion_top> is correct for synthesis.
+ 
+Analyzing module <scorpion> in library <work>.
+	state_attack = 4'b0111
+	state_dart = 4'b1000
+	state_retreat1 = 4'b0001
+	state_retreat2 = 4'b0100
+	state_sensor1 = 4'b0000
+	state_sensor2 = 4'b0011
+	state_sensor3 = 4'b0110
+	state_wait1 = 4'b0010
+	state_wait2 = 4'b0101
+	state_wait3 = 4'b1001
+Module <scorpion> is correct for synthesis.
+ 
+Analyzing module <clock_divider> in library <work>.
+	delay_bit = 32'sb00000000000000000000000000011001
+Module <clock_divider> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clock_divider>.
+    Related source file is "clock_divider.v".
+    Found 26-bit up counter for signal <counter>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <clock_divider> synthesized.
+
+
+Synthesizing Unit <scorpion>.
+    Related source file is "scorpion.v".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 20                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <scorpion> synthesized.
+
+
+Synthesizing Unit <scorpion_top>.
+    Related source file is "scorpion_top.v".
+    Using one-hot encoding for signal <action>.
+Unit <scorpion_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <scorp/state/FSM> on signal <state[1:10]> with one-hot encoding.
+---------------------
+ State | Encoding
+---------------------
+ 0000  | 0000000001
+ 0001  | 0000000010
+ 0010  | 0000000100
+ 0011  | 0000001000
+ 0100  | 0000010000
+ 0101  | 0000100000
+ 0110  | 0001000000
+ 0111  | 0010000000
+ 1000  | 0100000000
+ 1001  | 1000000000
+---------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 1
+ 26-bit up counter                                     : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <scorpion_top> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block scorpion_top, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : scorpion_top.ngr
+Top Level Output File Name         : scorpion_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 12
+
+Cell Usage :
+# BELS                             : 98
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 25
+#      LUT2                        : 2
+#      LUT4                        : 14
+#      LUT4_L                      : 1
+#      MUXCY                       : 25
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 26
+# FlipFlops/Latches                : 36
+#      FDC                         : 5
+#      FDCE                        : 4
+#      FDP                         : 1
+#      FDRE                        : 26
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 2
+#      OBUF                        : 9
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                       23  out of    960     2%  
+ Number of Slice Flip Flops:             36  out of   1920     1%  
+ Number of 4 input LUTs:                 44  out of   1920     2%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of     83    14%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 36    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+sw<0>                              | IBUF                   | 10    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.681ns (Maximum Frequency: 213.615MHz)
+   Minimum input arrival time before clock: 5.501ns
+   Maximum output required time after clock: 7.008ns
+   Maximum combinational path delay: 4.918ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.681ns (frequency: 213.615MHz)
+  Total number of paths / destination ports: 585 / 92
+-------------------------------------------------------------------------
+Delay:               4.681ns (Levels of Logic = 2)
+  Source:            scorp/state_FSM_FFd7 (FF)
+  Destination:       scorp/timer/counter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: scorp/state_FSM_FFd7 to scorp/timer/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.514   0.568  scorp/state_FSM_FFd7 (scorp/state_FSM_FFd7)
+     LUT4:I2->O            1   0.612   0.509  scorp/clk_second_reset5 (scorp/clk_second_reset5)
+     LUT2:I0->O           26   0.612   1.071  scorp/clk_second_reset12 (scorp/clk_second_reset)
+     FDRE:R                    0.795          scorp/timer/counter_0
+    ----------------------------------------
+    Total                      4.681ns (2.533ns logic, 2.148ns route)
+                                       (54.1% logic, 45.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              5.501ns (Levels of Logic = 3)
+  Source:            danger (PAD)
+  Destination:       scorp/timer/counter_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: danger to scorp/timer/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.106   0.795  danger_IBUF (ld_0_OBUF)
+     LUT4:I0->O            1   0.612   0.509  scorp/clk_second_reset5 (scorp/clk_second_reset5)
+     LUT2:I0->O           26   0.612   1.071  scorp/clk_second_reset12 (scorp/clk_second_reset)
+     FDRE:R                    0.795          scorp/timer/counter_0
+    ----------------------------------------
+    Total                      5.501ns (3.125ns logic, 2.376ns route)
+                                       (56.8% logic, 43.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 120 / 8
+-------------------------------------------------------------------------
+Offset:              7.008ns (Levels of Logic = 4)
+  Source:            scorp/state_FSM_FFd3 (FF)
+  Destination:       ld<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: scorp/state_FSM_FFd3 to ld<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.514   0.721  scorp/state_FSM_FFd3 (scorp/state_FSM_FFd3)
+     LUT4:I0->O            1   0.612   0.000  scorp/state_or00031 (scorp/state_or0003)
+     MUXF5:I0->O           4   0.278   0.651  scorp/state_or0003_f5 (state<0>)
+     LUT4:I0->O            3   0.612   0.451  action_or00001 (PIO_78_OBUF)
+     OBUF:I->O                 3.169          ld_2_OBUF (ld<2>)
+    ----------------------------------------
+    Total                      7.008ns (5.185ns logic, 1.823ns route)
+                                       (74.0% logic, 26.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               4.918ns (Levels of Logic = 2)
+  Source:            danger (PAD)
+  Destination:       ld<0> (PAD)
+
+  Data Path: danger to ld<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.106   0.643  danger_IBUF (ld_0_OBUF)
+     OBUF:I->O                 3.169          ld_0_OBUF (ld<0>)
+    ----------------------------------------
+    Total                      4.918ns (4.275ns logic, 0.643ns route)
+                                       (86.9% logic, 13.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 6.52 secs
+ 
+--> 
+
+
+Total memory usage is 163708 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
