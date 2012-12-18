@@ -11,13 +11,13 @@
          <ClosedNode>/traffic_top |home|benderamp|Documents|MIPS|EDA for programmers|hdl-code|verilog-basics|traffic_light|fraffic_light_top.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>traffic_light_top (/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/fraffic_light_top.v)</SelectedItem>
+         <SelectedItem>clock_divider_top (/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/clock_divider_top.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000120000000020000000000000000000000000200000064ffffffff000000810000000300000002000001200000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000125000000020000000000000000000000000200000064ffffffff000000810000000300000002000001250000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>traffic_light_top (/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/fraffic_light_top.v)</CurrentItem>
+      <CurrentItem>clock_divider_top (/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/clock_divider_top.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -80,13 +80,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001260000011b01000000040100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>

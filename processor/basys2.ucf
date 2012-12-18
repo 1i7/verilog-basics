@@ -1,0 +1,39 @@
+# Pin assignment for LEDs (show states for slide switches)
+NET "ld<3>" LOC = "p6" ; 
+NET "ld<2>" LOC = "p7" ; 
+NET "ld<1>" LOC = "m11" ; 
+NET "ld<0>" LOC = "m5" ;
+
+NET "ldf" LOC = "g1" ; 
+
+# Pin assignment for slide switches
+NET "bs<3>" LOC = "b4"; 
+NET "bs<2>" LOC = "k3"; 
+NET "bs<1>" LOC = "l3"; 
+NET "bs<0>" LOC = "p11";
+
+NET "bsf" LOC = "n3"; 
+
+# Pin assignment for clock
+NET "clk" LOC = "b8"; 
+
+# Loop Back only tested signals
+NET "v<0>" LOC = "B2";
+NET "v<1>" LOC = "A3";
+NET "v<2>" LOC = "J3";
+NET "v<3>" LOC = "B5";
+
+NET "v<4>" LOC = "C6";
+NET "v<5>" LOC = "B6";
+NET "v<6>" LOC = "C5";
+NET "v<7>" LOC = "B7";
+
+#NET "PIO<80>" LOC = "A9";
+#NET "PIO<81>" LOC = "B9";
+#NET "PIO<82>" LOC = "A10";
+#NET "PIO<83>" LOC = "C9";
+
+#NET "PIO<84>" LOC = "C12";
+#NET "PIO<85>" LOC = "A13";
+#NET "PIO<86>" LOC = "C13";
+#NET "PIO<87>" LOC = "D12";

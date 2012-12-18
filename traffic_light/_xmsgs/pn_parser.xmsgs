@@ -8,6 +8,18 @@
 <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/clock_divider.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/clock_divider_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/timer.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/traffic_light.v&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/traffic_light/traffic_light_top.v&quot; into library work</arg>
 </msg>
 
