@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2012-12-18T16:21:22</DateModified>
+  <DateModified>2013-04-01T22:06:04</DateModified>
   <ModuleName>mips_top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2013-01-15T17:44:07</SummaryTimeStamp>
   <SavedFilePath>/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/processor/iseconfig/mips_top.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/benderamp/Documents/MIPS/EDA for programmers/hdl-code/verilog-basics/processor/</ImplementationReportsDirectory>
   <DateInitialized>2012-10-27T17:09:37</DateInitialized>

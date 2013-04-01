@@ -41,7 +41,7 @@ module datamem (input clk,
 		          RAM[addr[31:2]] <= wd; 
 		  end		  
 	 
-	 // bs (array of button switches), bs_0 (single button switch)
+	 // bs (array of button switches), bsf (single button switch flag)
 	 assign rd = addr == 32'h0000f004 ? bs : (addr == 32'h0000f008 ? bsf : RAM[addr[31:2]]);
 	 // and v (7segment display "video memory")	 
 	 assign v = ~video; // invert value for common anode display

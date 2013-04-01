@@ -165,7 +165,7 @@ module datapath_and_controller(input clk,
 				
 				INSTR_RTYPE_FUNCT_SUB:
 		      begin
-		          // add $s0, $s1, $s2
+		          // sub $s0, $s1, $s2
 				    // $s0 = $s1 - $s2
 					 // rs=$s1, rt=$s2, rd=$s0
 				
@@ -187,7 +187,7 @@ module datapath_and_controller(input clk,
 		  begin
 		      // lw $s0, 4 ($0)
 				// load word (32 bit) from memory at addr $0 + 4 to register $s0
-				// rs=$0, rt=$s1, imm=4
+				// rs=$0, rt=$s0, imm=4
 				
 				// rf_rd1 would immediately receive rs register value
 				rf_ra1 = instr_itype_rs;
@@ -205,7 +205,7 @@ module datapath_and_controller(input clk,
 		  begin
 		      // sw $s0, 4 ($0)
 				// save word (32 bit) to memory at addr $0 + 4 from register $s0
-				// rs=$0, rt=$s1, imm=4
+				// rs=$0, rt=$s0, imm=4
 				
 				// rf_rd1 would immediately receive rs register value
 				rf_ra1 = instr_itype_rs;
@@ -254,7 +254,7 @@ module datapath_and_controller(input clk,
 		  begin
 		      // j 4
 				// jump to 4 ((!)absolute value for simplicity)
-				// addr = 5
+				// addr = 4
 				
 				pc_next = instr_jtype_addr;
 		  end

@@ -17,7 +17,7 @@ NET "bsf" LOC = "n3";
 # Pin assignment for clock
 NET "clk" LOC = "b8"; 
 
-# Loop Back only tested signals
+# Pin assignment for 7segment display
 NET "v<0>" LOC = "B2";
 NET "v<1>" LOC = "A3";
 NET "v<2>" LOC = "J3";
@@ -28,12 +28,3 @@ NET "v<5>" LOC = "B6";
 NET "v<6>" LOC = "C5";
 NET "v<7>" LOC = "B7";
 
-#NET "PIO<80>" LOC = "A9";
-#NET "PIO<81>" LOC = "B9";
-#NET "PIO<82>" LOC = "A10";
-#NET "PIO<83>" LOC = "C9";
-
-#NET "PIO<84>" LOC = "C12";
-#NET "PIO<85>" LOC = "A13";
-#NET "PIO<86>" LOC = "C13";
-#NET "PIO<87>" LOC = "D12";

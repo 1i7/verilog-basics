@@ -8,12 +8,12 @@ module instrmem (
 	 output [31:0] instr);
 	 
 	 // uncomment required module for test
-	 //instrmem_test_7segment_draw_8 instrmem_program(addr, instr);
+	 instrmem_test_7segment_draw_8 instrmem_program(addr, instr);
 	 //instrmem_test_7segment_draw_5 instrmem_program(addr, instr);
 	 //instrmem_test_beq_input instrmem_program(addr, instr);
 	 //instrmem_test_sw_lw instrmem_program(addr, instr);
 	 //instrmem_test_input_4bits instrmem_program(addr, instr);	 
-	 instrmem_test_io_calc instrmem_program(addr, instr);
+	 //instrmem_test_io_calc instrmem_program(addr, instr);
 endmodule
 
 /** 
