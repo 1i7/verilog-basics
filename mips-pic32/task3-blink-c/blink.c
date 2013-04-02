@@ -1,23 +1,22 @@
 #include <p32xxxx.h>
+/**
+ * Помигать лампочкой на chipkit#pin8 (pic32 RD10).
+ */
 
+/**
+ * Настраиваем пины ввода-вывода и таймер.
+ */
 void setup() {
     // режим вывода для pin8 (=RD10=PORTD[10])
     TRISDCLR = 1 << 10;
-
-    // режим ввода для pin4 (=RF1=PORTF[1])
-    TRISFSET = 1 << 1;
 
     // включить таймер
     T1CON = 0x8030;
 }
 
-int readButton() {
-    if(PORTF | 1 << 1)
-        return 1;
-    else
-        return 0;
-}
-
+/**
+ * Запуск бесконечного цикла с миганием.
+ */
 void blink() {
     while(1) {
         // установить значение - включить лампочку
@@ -38,21 +37,8 @@ void blink() {
 	}
 }
 
-void on_off() {
-    while(1) {
-        if(readButton()) {
-            // установить значение - включить лампочку
-            PORTDSET = 1 << 10;
-        } else {
-            // очистить значение - выключить лампочку
-            PORTDCLR = 1 << 10;
-        }
-    }
-}
-
 void main() {  
     setup();
 
-    //blink();
-    on_off();
+    blink();
 }
