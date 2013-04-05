@@ -2,7 +2,7 @@
 
 ####################################################################
 # Зажечь лампочку по нажатию кнопки
-main:   .global main                // Помечаем метку main как глобальную
+main:   .global main                # Помечаем метку main как глобальную
 
     # Set pin4 (RF1) as input - set TRISF[1] bit to 1 - send 0x1 to TRISFCLR
     addi   $t1, $0, 1 << 1
