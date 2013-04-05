@@ -18,7 +18,7 @@ void setup() {
  * Прочитать текущее значение кнопки: 1 - вкл, 0 - выкл.
  */
 int readButton() {
-    if(PORTF | 1 << 1)
+    if(PORTF & 1 << 1)
         return 1;
     else
         return 0;
