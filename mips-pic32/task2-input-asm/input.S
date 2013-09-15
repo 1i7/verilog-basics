@@ -1,39 +1,40 @@
 
 
 ####################################################################
-# Зажечь лампочку по нажатию кнопки
+# Зажечь лампочку RD10 (chipKIT #8) по нажатию кнопки RF1 (chipKIT #4)
 main:   .global main                # Помечаем метку main как глобальную
 
-    # Set pin4 (RF1) as input - set TRISF[1] bit to 1 - send 0x1 to TRISFCLR
+    # Установить пин RF1 как ввод - устновить бит TRISF[1] в 1 - отправить 0x1 в регистр TRISFSET
     addi   $t1, $0, 1 << 1
-    li     $t2, 0xBF886148 #TRISFSET
+    la     $t2, 0xBF886148 #TRISFSET
     sw     $t1, 0 ($t2)
 
-    # Set pin8 (RD10) as output - set TRISD[10] bit to 1 - send 0x400 to TRISDCLR
+    # Установить пин RD10 как вывод - устновить бит TRISD[10] в 1 - отправить 0x400 в регистр TRISDCLR
     addi   $t1, $0, 1 << 10
-    li     $t2, 0xBF8860C4 #TRISDCLR
+    la     $t2, 0xBF8860C4 #TRISDCLR
     sw     $t1, 0 ($t2)  
 
 loop:
-    # Read value from pin4 (RF1) - get PORTF[1] value
-    li     $t2, 0xBF886150 #PORTF
+    # Считать значение с пина RF1 - получить значение бита PORTF[1]
+    la     $t2, 0xBF886150 #PORTF
     lw     $t1, 0 ($t2)
     ext    $t3, $t1, 1, 1
     
     addi   $t4, $0, 1
     beq $t3, $t4, button_on
 
-    # button is off
-    # Set value 0 to pin8 (RD10) - set PORTD[10] BIT TO 1 - send 0x400 to PORTDSET
+    # кнопка выключена
+    # Задать значение 0 на пине RD10 - установить бит PORTD[10] в 0 - отправить 0x400 в регистр LATDCLR
     addi   $t1, $0, 1 << 10
-    li     $t2, 0xBF8860D4 #PORTDCLR
+    la     $t2, 0xBF8860E4 #LATDCLR
     sw     $t1, 0 ($t2) 
 
     j loop
 button_on:
-    # Set value 1 to pin8 (RD10) - set PORTD[10] BIT TO 1 - send 0x400 to PORTDSET
+    # кнопка включена
+    # Задать значение 1 на пине RD10 - установить бит PORTD[10] в 1 - отправить 0x400 в регистр LATDSET
     addi   $t1, $0, 1 << 10
-    li     $t2, 0xBF8860D0 #PORTDSET
+    la     $t2, 0xBF8860E8 #LATDSET
     sw     $t1, 0 ($t2) 
 
     j loop

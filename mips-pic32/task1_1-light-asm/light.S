@@ -1,16 +1,17 @@
 
-
+#include <p32xxxx.h>
 ####################################################################
 # Зажечь лампочку на пине RD10 (chipKIT #8) ассемблером
 main:   .global main                # Помечаем метку main как глобальную
 
     # Установить пин RD10 как вывод - установить бит TRISD[10] в 1 - отправить 0x400 в TRISDCLR
-    li     $t1, 1 << 10
-    la     $t2, 0xBF8860C4 #TRISDCLR
-    sw     $t1, 0 ($t2) 
+
+    li t1, 1 << 10
+    la t2, TRISDCLR #0xBF8860C4
+    sw t1, 0 (t2) 
     
     # Установить значение 1 на пине RD10 - установить бит LATD[10] в 1 - отправить 0x400 в LATDSET
-    li     $t1, 1 << 10
-    la     $t2, 0xBF8860E8 #LATDSET
-    #la     $t2, 0xBF8860E4 #LATDCLR
-    sw     $t1, 0 ($t2) 
+    li t1, 1 << 10
+    la t2, LATDSET #0xBF8860E8
+    #la t2, LATDCLR #0xBF8860E4
+    sw t1, 0 (t2) 
